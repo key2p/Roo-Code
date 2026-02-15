@@ -9,9 +9,6 @@ jobs:
   publish-nightly:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read # No tags pushed → read is enough.
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
