@@ -49,4 +49,4 @@ jobs:
           allowUpdates: true
           makeLatest: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: *.vsix
+          artifacts: bin/*
