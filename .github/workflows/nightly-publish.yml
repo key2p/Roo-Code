@@ -49,4 +49,5 @@ jobs:
           allowUpdates: true
           makeLatest: true
           token: ${{ secrets.GITHUB_TOKEN }}
+          tag: nighlty
           artifacts: bin/*
