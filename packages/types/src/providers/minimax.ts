@@ -8,21 +8,6 @@ export type MinimaxModelId = keyof typeof minimaxModels
 export const minimaxDefaultModelId: MinimaxModelId = "MiniMax-M2.7"
 
 export const minimaxModels = {
-	"MiniMax-M2.7": {
-		maxTokens: 131_072,
-		contextWindow: 192_000,
-		supportsImages: false,
-		supportsPromptCache: true,
-		includedTools: ["search_and_replace"],
-		excludedTools: ["apply_diff"],
-		preserveReasoning: true,
-		inputPrice: 0.3,
-		outputPrice: 1.2,
-		cacheWritesPrice: 0.375,
-		cacheReadsPrice: 0.03,
-		description:
-			"MiniMax M2.7, the newest MiniMax model with further enhanced coding and agentic capabilities, building on the strengths of the M2 series with a larger output window.",
-	},
 	"MiniMax-M2.5": {
 		maxTokens: 16_384,
 		contextWindow: 204_800,

@@ -9,7 +9,7 @@ import { ZaiApiLine } from "../provider-settings.js"
 // https://bigmodel.cn/pricing
 
 export type InternationalZAiModelId = keyof typeof internationalZAiModels
-export const internationalZAiDefaultModelId: InternationalZAiModelId = "glm-4.6"
+export const internationalZAiDefaultModelId: InternationalZAiModelId = "glm-5.1"
 export const internationalZAiModels = {
 	"glm-4.5": {
 		maxTokens: 16_384,
@@ -121,6 +121,21 @@ export const internationalZAiModels = {
 			"GLM-4.7 is Zhipu's latest model with built-in thinking capabilities enabled by default. It provides enhanced reasoning for complex tasks while maintaining fast response times.",
 	},
 	"glm-5": {
+                maxTokens: 16_384,
+                contextWindow: 202_752,
+                supportsImages: false,
+                supportsPromptCache: true,
+                supportsReasoningEffort: ["disable", "medium"],
+                reasoningEffort: "medium",
+                preserveReasoning: true,
+                inputPrice: 0.6,
+                outputPrice: 2.2,
+                cacheWritesPrice: 0,
+                cacheReadsPrice: 0.11,
+                description:
+                        "GLM-5 is Zhipu's next-generation model with a 202k context window and buil",
+        },
+	"glm-5.1": {
 		maxTokens: 16_384,
 		contextWindow: 202_752,
 		supportsImages: false,
@@ -133,7 +148,7 @@ export const internationalZAiModels = {
 		cacheWritesPrice: 0,
 		cacheReadsPrice: 0.11,
 		description:
-			"GLM-5 is Zhipu's next-generation model with a 202k context window and built-in thinking capabilities. It delivers state-of-the-art reasoning, coding, and agentic performance.",
+			"GLM-5.1 is Zhipu's next-generation model with a 202k context window and built-in thinking capabilities. It delivers state-of-the-art reasoning, coding, and agentic performance.",
 	},
 	"glm-4.7-flash": {
 		maxTokens: 16_384,
@@ -197,7 +212,7 @@ export const internationalZAiModels = {
 } as const satisfies Record<string, ModelInfo>
 
 export type MainlandZAiModelId = keyof typeof mainlandZAiModels
-export const mainlandZAiDefaultModelId: MainlandZAiModelId = "glm-4.6"
+export const mainlandZAiDefaultModelId: MainlandZAiModelId = "glm-5.1"
 export const mainlandZAiModels = {
 	"glm-4.5": {
 		maxTokens: 16_384,
@@ -325,6 +340,21 @@ export const mainlandZAiModels = {
 		cacheReadsPrice: 0.1,
 		description:
 			"GLM-5-Turbo is Zhipu's next-generation model with a 200k context window and built-in thinking capabilities. It delivers state-of-the-art reasoning, coding, and agentic performance.",
+	},
+	"glm-5.1": {
+		maxTokens: 16_384,
+		contextWindow: 200_000,
+		supportsImages: false,
+		supportsPromptCache: true,
+		supportsReasoningEffort: ["disable", "medium"],
+		reasoningEffort: "medium",
+		preserveReasoning: true,
+		inputPrice: 0.48,
+		outputPrice: 1.66,
+		cacheWritesPrice: 0,
+		cacheReadsPrice: 0.1,
+		description:
+			"GLM-5.1 is Zhipu's next-generation model with a 200k context window and built-in thinking capabilities. It delivers state-of-the-art reasoning, coding, and agentic performance.",
 	},
 	"glm-4.7-flash": {
 		maxTokens: 16_384,
