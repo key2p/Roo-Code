@@ -16,14 +16,6 @@
 		"export": "匯出工作記錄",
 		"share": "分享工作",
 		"delete": "刪除工作（按住 Shift 並點選可跳過確認）",
-		"shareWithOrganization": "與組織分享",
-		"shareWithOrganizationDescription": "僅組織成員可存取",
-		"sharePublicly": "公開分享",
-		"sharePubliclyDescription": "任何擁有連結的人都可存取",
-		"connectToCloud": "連線至雲端",
-		"connectToCloudDescription": "登入 Roo Code Cloud 以分享工作",
-		"sharingDisabledByOrganization": "組織已停用分享功能",
-		"shareSuccessOrganization": "組織連結已複製到剪貼簿",
 		"shareSuccessPublic": "公開連結已複製到剪貼簿",
 		"openApiHistory": "開啟 API 歷史紀錄",
 		"openUiHistory": "開啟 UI 歷史紀錄",
@@ -145,7 +137,6 @@
 	"enhancePrompt": "使用額外內容強化提示詞",
 	"modeSelector": {
 		"title": "模式",
-		"marketplace": "模式市集",
 		"settings": "模式設定",
 		"description": "專門量身打造 Roo 行為的角色。",
 		"searchPlaceholder": "搜尋模式...",
@@ -185,7 +176,7 @@
 			"docs": "說明文件",
 			"goToSettings": "設定",
 			"connection": "連線錯誤。請確保您有可用的網際網路連線。",
-			"unknown": "未知 API 錯誤。請聯絡 Roo Code 技術支援。",
+			"unknown": "Unknown API error. Please report this on GitHub.",
 			"claudeCodeNotAuthenticated": "您需要登入才能使用 Claude Code。前往設定並點選「登入 Claude Code」以進行驗證。"
 		}
 	},
@@ -362,20 +353,18 @@
 	"announcement": {
 		"title": "Roo Code {{version}} 已發布",
 		"support": "請在 <githubLink>GitHub</githubLink> 上給 Roo Code 星星支持我們。",
-		"stealthModel": {
-			"feature": "<bold>限時免費隱形模型</bold> - Code Supernova：現已升級為 <bold>1M Token 上下文視窗</bold>！一個支援影像輸入的多功能代理程式設計模型，透過 Roo Code Cloud 提供。",
-			"note": "（注意：提示詞和回應會被模型建立者記錄並用於改進模型）",
-			"connectButton": "連線到 Roo Code Cloud",
-			"selectModel": "在設定中從 Roo Code Cloud 供應商選擇 <code>roo/code-supernova</code> 開始使用。",
-			"goToSettingsButton": "前往設定"
+		"finalRelease": {
+			"title": "Roo Code 的最後一個版本",
+			"intro": "這是 Roo Code 的最後一個版本。<announcementLink>正如我們幾週前宣布的那樣</announcementLink>，我們決定將重心轉向 <roomoteLink>Roomote</roomoteLink>，這是我們的雲端代理平台，我們相信它是軟體開發的未來。非常感謝你在過去一年左右的支持。",
+			"continuity": "這個擴充功能應該會繼續無限期運作，但不會再收到錯誤修正、新功能或模型更新。",
+			"alternatives": "如果你想使用擴充功能，我們建議看看 <zooCodeLink>ZooCode</zooCodeLink>（由社群維護的 Roo Code fork）和 <clineLink>Cline</clineLink>（Roo Code 最初起源的專案）。",
+			"signoff": "Happy coding!"
 		},
 		"release": {
 			"heading": "新增功能：",
-			"gpt54": "Poe 供應商：已將 Poe 新增為 AI 供應商，讓你可以在 Roo Code 中直接存取 Poe 模型。",
-			"slashSkills": "xAI 與 MiniMax 改進：已將 xAI 供應商遷移至 Responses API，加入可重複使用的轉換工具，更新了 Grok-4.20 預設值，並修正 MiniMax 模型清單和上下文視窗處理方式，讓設定更加可靠。",
-			"geminiPro": "Gemini 3.1 Pro 支援：新增 Gemini 3.1 Pro 模型支援，並設為預設 Gemini 模型以提升效能。",
-			"cliNdjson": "CLI NDJSON 協定：新增 NDJSON stdin 協定、list 子指令，以及模組化的 run 指令，提供更彈性的 CLI 工作流程。",
-			"cliRelease": "CLI v0.1.0：Roo Code CLI 以穩定的指令介面達成首個正式版本。"
+			"gpt55": "透過 OpenAI Codex 支援 GPT-5.5：已在 OpenAI Codex 供應商中新增 GPT-5.5 支援，讓你可以直接在 Roo Code 中使用最新模型。",
+			"claudeOpus47": "Vertex AI 上的 Claude Opus 4.7：已將 Anthropic 最新旗艦推理模型 Claude Opus 4.7 新增至 Vertex AI 供應商。",
+			"checkpointNav": "前一個存檔點導覽：在聊天中新增控制項，可回到此前的存檔點，並提供完整的 i18n 支援。"
 		},
 		"cloudAgents": {
 			"heading": "雲端的新功能：",
@@ -491,7 +480,8 @@
 	},
 	"retiredProvider": {
 		"title": "供應商不再受支援",
-		"message": "抱歉，此供應商已不再受支援。我們發現實際使用它的 Roo 使用者非常少，我們需要縮減程式碼庫的範圍，以便繼續快速交付並更好地服務社群。這是一個非常艱難的決定，但它能讓我們專注於對你最重要的事情。我們知道這很遺憾。",
-		"openSettings": "開啟設定"
+		"message": "This provider is no longer supported. Please select a different provider in your API profile settings.",
+		"openSettings": "開啟設定",
+		"rooMessage": "As part of our decision to sunset the Roo Code extension, we also ended the Roo Code Router, which only existed to support the extension. Sorry about the hassle."
 	}
 }

@@ -16,14 +16,6 @@
 		"delete": "Eliminar tarea (Shift + Clic para omitir confirmación)",
 		"condenseContext": "Condensar contexto de forma inteligente",
 		"share": "Compartir tarea",
-		"shareWithOrganization": "Compartir con organización",
-		"shareWithOrganizationDescription": "Solo los miembros de tu organización pueden acceder",
-		"sharePublicly": "Compartir públicamente",
-		"sharePubliclyDescription": "Cualquiera con el enlace puede acceder",
-		"connectToCloud": "Conectar al Cloud",
-		"connectToCloudDescription": "Inicia sesión en Roo Code Cloud para compartir tareas",
-		"sharingDisabledByOrganization": "Compartir deshabilitado por la organización",
-		"shareSuccessOrganization": "Enlace de organización copiado al portapapeles",
 		"shareSuccessPublic": "Enlace público copiado al portapapeles",
 		"openApiHistory": "Abrir historial de API",
 		"openUiHistory": "Abrir historial de UI",
@@ -128,7 +120,6 @@
 	"enhancePromptDescription": "El botón 'Mejorar el mensaje' ayuda a mejorar tu petición proporcionando contexto adicional, aclaraciones o reformulaciones. Intenta escribir una petición aquí y haz clic en el botón nuevamente para ver cómo funciona.",
 	"modeSelector": {
 		"title": "Modos",
-		"marketplace": "Marketplace de Modos",
 		"settings": "Configuración de Modos",
 		"description": "Personalidades especializadas que adaptan el comportamiento de Roo.",
 		"searchPlaceholder": "Buscar modos...",
@@ -162,7 +153,7 @@
 			"500": "Error del servidor del proveedor. Algo está mal en el lado del proveedor, no hay nada mal con tu solicitud.",
 			"docs": "Documentación",
 			"goToSettings": "Configuración",
-			"unknown": "Error API desconocido. Por favor contacta al soporte de Roo Code.",
+			"unknown": "Unknown API error. Please report this on GitHub.",
 			"connection": "Error de conexión. Asegúrate de tener una conexión a Internet funcional.",
 			"claudeCodeNotAuthenticated": "Debes iniciar sesión para usar Claude Code. Ve a Configuración y haz clic en \"Iniciar sesión en Claude Code\" para autenticarte."
 		}
@@ -340,20 +331,18 @@
 	"announcement": {
 		"title": "Roo Code {{version}} publicado",
 		"support": "Por favor, apoya a Roo Code dándonos una estrella en <githubLink>GitHub</githubLink>.",
-		"stealthModel": {
-			"feature": "<bold>Modelo stealth GRATUITO por tiempo limitado</bold> - Code Supernova: ¡Ahora actualizado con una <bold>ventana de contexto de 1M tokens</bold>! Un modelo de codificación agéntica versátil que soporta entradas de imágenes, accesible a través de Roo Code Cloud.",
-			"note": "(Nota: los prompts y completaciones son registrados por el creador del modelo y utilizados para mejorarlo)",
-			"connectButton": "Conectar a Roo Code Cloud",
-			"selectModel": "Selecciona <code>roo/code-supernova</code> del proveedor Roo Code Cloud en Configuración para comenzar.",
-			"goToSettingsButton": "Ir a Configuración"
+		"finalRelease": {
+			"title": "La última versión de Roo Code",
+			"intro": "Esta es la última versión de Roo Code. <announcementLink>Como anunciamos hace unas semanas</announcementLink>, hemos decidido centrar nuestros esfuerzos en <roomoteLink>Roomote</roomoteLink>, nuestra plataforma de agentes en la nube, que creemos que es el futuro del desarrollo de software. Muchas gracias por tu apoyo durante este último año aproximadamente.",
+			"continuity": "Esta extensión debería seguir funcionando indefinidamente, pero no recibirá correcciones de errores, nuevas funciones ni actualizaciones de modelos.",
+			"alternatives": "Si quieres usar una extensión, te recomendamos echar un vistazo a <zooCodeLink>ZooCode</zooCodeLink> (un fork comunitario de Roo Code) y <clineLink>Cline</clineLink> (donde Roo Code comenzó originalmente).",
+			"signoff": "¡Feliz programación!"
 		},
 		"release": {
 			"heading": "Qué hay de nuevo:",
-			"gpt54": "Proveedor Poe: Se añadió Poe como proveedor de IA para que puedas acceder directamente a los modelos de Poe en Roo Code.",
-			"slashSkills": "Mejoras en xAI y MiniMax: Se migró el proveedor xAI a la Responses API, se añadieron utilidades de transformación reutilizables, se actualizaron los valores predeterminados de Grok-4.20 y se corrigieron los listados de modelos de MiniMax y el manejo de la ventana de contexto para una configuración más fiable.",
-			"geminiPro": "Soporte para Gemini 3.1 Pro: Se añadió soporte para el modelo Gemini 3.1 Pro y se estableció como modelo Gemini predeterminado para un mejor rendimiento.",
-			"cliNdjson": "Protocolo NDJSON del CLI: Nuevo protocolo NDJSON por stdin, subcomandos de listado y comando de ejecución modularizado para flujos de trabajo CLI más flexibles.",
-			"cliRelease": "CLI v0.1.0: El CLI de Roo Code alcanza su primera versión oficial con una interfaz de comandos estable."
+			"gpt55": "GPT-5.5 vía OpenAI Codex: Se añadió soporte para GPT-5.5 en el proveedor OpenAI Codex para que puedas usar el modelo más reciente directamente desde Roo Code.",
+			"claudeOpus47": "Claude Opus 4.7 en Vertex AI: Se añadió Claude Opus 4.7 al proveedor Vertex AI, el modelo de razonamiento insignia más reciente de Anthropic.",
+			"checkpointNav": "Navegación por Checkpoints Anteriores: Se añadieron controles en el chat para retroceder por los checkpoints previos, con soporte completo de i18n."
 		},
 		"cloudAgents": {
 			"heading": "Novedades en la Nube:",
@@ -434,11 +423,6 @@
 	"versionIndicator": {
 		"ariaLabel": "Versión {{version}} - Haz clic para ver las notas de la versión"
 	},
-	"rooCloudCTA": {
-		"title": "¡Roo Code Cloud está evolucionando!",
-		"description": "Ejecuta agentes remotos en la nube, accede a tus tareas desde cualquier lugar, colabora con otros y mucho más.",
-		"joinWaitlist": "Regístrate para recibir las últimas actualizaciones."
-	},
 	"editMessage": {
 		"placeholder": "Edita tu mensaje..."
 	},
@@ -500,7 +484,8 @@
 	},
 	"retiredProvider": {
 		"title": "Proveedor ya no compatible",
-		"message": "Lo sentimos, este proveedor ya no es compatible. Vimos que muy pocos usuarios de Roo lo usaban realmente y necesitamos reducir el alcance de nuestro código para poder seguir avanzando rápido y servir bien a nuestra comunidad en este espacio. Fue una decisión muy difícil, pero nos permite enfocarnos en lo que más te importa. Lo sabemos, es una lástima.",
-		"openSettings": "Abrir configuración"
+		"message": "This provider is no longer supported. Please select a different provider in your API profile settings.",
+		"openSettings": "Abrir configuración",
+		"rooMessage": "As part of our decision to sunset the Roo Code extension, we also ended the Roo Code Router, which only existed to support the extension. Sorry about the hassle."
 	}
 }

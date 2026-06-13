@@ -1,5 +1,17 @@
 # Roo Code Changelog
 
+## 3.53.0
+
+### Minor Changes
+
+- **The Roo Code plugin is not going away.** You may have seen the [recent announcement](https://x.com/mattrubens/status/2046636598859559114) that Roo Code hit 3 million installs and the original team is going all-in on Roomote. We know that news was hard for a lot of you. This plugin means a lot to us and to you, and we hear you. The good news: a community team has stepped up to carry Roo Code forward, and we're working with them on an official handoff so the plugin you rely on keeps getting maintained and improved.
+- Add GPT-5.5 support via the OpenAI Codex provider (PR #12170 by @hannesrudolph)
+- Add Claude Opus 4.7 support on Vertex AI (#12134 by @saneroen, PR #12135 by @saneroen)
+- Add previous checkpoint navigation controls and i18n in chat (#12138 by @saneroen, PR #12139 by @saneroen)
+- Add Roomote banner (PR #12119 by @brunobergher)
+- Redesign Roomote announcement banner with violet branding on the web (PR #12161 by @roomote-v0)
+- Add sunsetting Roo Code blog post (PR #12160 by @roomote-v0)
+
 ## 3.52.1
 
 ### Patch Changes
@@ -1262,7 +1274,6 @@
 - Reposition Add Image button inside ChatTextArea (thanks @roomote!)
 - Bring back a way to temporarily and globally pause auto-approve without losing your toggle state (thanks @brunobergher!)
 - Makes text area buttons appear only when there's text (thanks @brunobergher!)
-- CONTRIBUTING.md tweaks and issue template rewrite (thanks @hannesrudolph!)
 - Bump axios from 1.9.0 to 1.12.0 (thanks @dependabot!)
 
 ## [3.28.2] - 2025-09-14
@@ -1722,7 +1733,6 @@
 - Fix Claude model detection by name for API protocol selection (thanks @daniel-lxs!)
 - Move marketplace icon from overflow menu to top navigation
 - Optional setting to prevent completion with open todos
-- Added YouTube to website footer (thanks @thill2323!)
 
 ## [3.23.14] - 2025-07-17
 
@@ -2116,7 +2126,6 @@
 - Fix bug with context condensing in Amazon Bedrock
 - Fix UTF-8 encoding in ExecaTerminalProcess (thanks @mr-ryan-james!)
 - Set sidebar name bugfix (thanks @chrarnoldus!)
-- Fix link to CONTRIBUTING.md in feature request template (thanks @cannuri!)
 - Add task metadata to Unbound and improve caching logic (thanks @pugazhendhi-m!)
 
 ## [3.19.0] - 2025-05-29
@@ -3084,7 +3093,6 @@
 - Ask and Architect modes can now edit markdown files
 - Custom modes can now be restricted to specific file patterns (for example, a technical writer who can only edit markdown files 👋)
 - Support for configuring the Bedrock provider with AWS Profiles
-- New Roo Code community Discord at https://roocode.com/discord!
 
 ## [3.2.8]
 
@@ -3123,8 +3131,6 @@
     - Choose which tools each mode can access
     - Create specialized assistants for any workflow
     - Just type "Create a new mode for <X>" or visit the Prompts tab in the top menu to get started
-
-Join us at https://www.reddit.com/r/RooCode to share your custom modes and be part of our next chapter!
 
 ## [3.1.7]
 
@@ -3173,11 +3179,7 @@ Join us at https://www.reddit.com/r/RooCode to share your custom modes and be pa
 
 ## [3.0.1]
 
-- Fix the reddit link and a small visual glitch in the chat input
-
 ## [3.0.0]
-
-- This release adds chat modes! Now you can ask Roo Code questions about system architecture or the codebase without immediately jumping into writing code. You can even assign different API configuration profiles to each mode if you prefer to use different models for thinking vs coding. Would love feedback in the new Roo Code Reddit! https://www.reddit.com/r/RooCode
 
 ## [2.2.46]
 

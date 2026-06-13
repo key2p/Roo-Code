@@ -16,14 +16,6 @@
 		"delete": "Eliminar tasca (Shift + Clic per ometre confirmació)",
 		"condenseContext": "Condensar context de forma intel·ligent",
 		"share": "Compartir tasca",
-		"shareWithOrganization": "Compartir amb l'organització",
-		"shareWithOrganizationDescription": "Només els membres de la teva organització poden accedir",
-		"sharePublicly": "Compartir públicament",
-		"sharePubliclyDescription": "Qualsevol amb l'enllaç pot accedir",
-		"connectToCloud": "Connecta al núvol",
-		"connectToCloudDescription": "Inicia sessió a Roo Code Cloud per compartir tasques",
-		"sharingDisabledByOrganization": "Compartició deshabilitada per l'organització",
-		"shareSuccessOrganization": "Enllaç d'organització copiat al porta-retalls",
 		"shareSuccessPublic": "Enllaç públic copiat al porta-retalls",
 		"openApiHistory": "Obrir historial d'API",
 		"openUiHistory": "Obrir historial d'UI",
@@ -128,7 +120,6 @@
 	"enhancePromptDescription": "El botó 'Millora la sol·licitud' ajuda a millorar la teva sol·licitud proporcionant context addicional, aclariments o reformulacions. Prova d'escriure una sol·licitud aquí i fes clic al botó de nou per veure com funciona.",
 	"modeSelector": {
 		"title": "Modes",
-		"marketplace": "Marketplace de Modes",
 		"settings": "Configuració de Modes",
 		"description": "Personalitats especialitzades que adapten el comportament de Roo.",
 		"searchPlaceholder": "Cerca modes...",
@@ -162,7 +153,7 @@
 			"500": "Error del servidor del proveïdor. Quelcom va malament del costat del proveïdor, no hi ha res de malament amb la teva sol·licitud.",
 			"docs": "Documentació",
 			"goToSettings": "Configuració",
-			"unknown": "Error API desconegut. Si us plau contacta amb el suport de Roo Code.",
+			"unknown": "Unknown API error. Please report this on GitHub.",
 			"connection": "Error de connexió. Assegureu-vos que teniu una connexió a Internet funcional.",
 			"claudeCodeNotAuthenticated": "Has d'iniciar sessió per utilitzar Claude Code. Vés a Configuració i fes clic a \"Iniciar sessió a Claude Code\" per autenticar-te."
 		}
@@ -340,20 +331,18 @@
 	"announcement": {
 		"title": "Roo Code {{version}} Llançat",
 		"support": "Si us plau, dona suport a Roo Code fent una estrella al nostre <githubLink>GitHub</githubLink>.",
-		"stealthModel": {
-			"feature": "<bold>Model stealth GRATUÏT per temps limitat</bold> - Code Supernova: Ara actualitzat amb una <bold>finestra de context d'1M tokens</bold>! Un model de codificació agèntica versàtil que suporta entrades d'imatges, disponible a través de Roo Code Cloud.",
-			"note": "(Nota: els prompts i completacions són registrats pel creador del model i utilitzats per millorar-lo)",
-			"connectButton": "Connectar a Roo Code Cloud",
-			"selectModel": "Selecciona <code>roo/code-supernova</code> del proveïdor Roo Code Cloud a Configuració per començar.",
-			"goToSettingsButton": "Anar a Configuració"
+		"finalRelease": {
+			"title": "L'última versió de Roo Code",
+			"intro": "Aquesta és l'última versió de Roo Code. <announcementLink>Com vam anunciar fa unes setmanes</announcementLink>, hem decidit centrar-nos en <roomoteLink>Roomote</roomoteLink>, la nostra plataforma d'agents al núvol, que creiem que és el futur del desenvolupament de programari. Moltes gràcies pel teu suport durant aquest darrer any aproximadament.",
+			"continuity": "Aquesta extensió hauria de continuar funcionant indefinidament, però no rebrà correccions d'errors, noves funcionalitats ni actualitzacions de models.",
+			"alternatives": "Si vols utilitzar una extensió, et recomanem donar un cop d'ull a <zooCodeLink>ZooCode</zooCodeLink> (un fork comunitari de Roo Code) i <clineLink>Cline</clineLink> (d'on va començar originalment Roo Code).",
+			"signoff": "Feliç programació!"
 		},
 		"release": {
 			"heading": "Què hi ha de nou:",
-			"gpt54": "Proveïdor Poe: S'ha afegit Poe com a proveïdor d’IA perquè puguis accedir directament als models de Poe a Roo Code.",
-			"slashSkills": "Millores a xAI i MiniMax: S'ha migrat el proveïdor xAI a la Responses API, s'hi han afegit utilitats de transformació reutilitzables, s'han actualitzat els valors per defecte de Grok-4.20 i s'han corregit els llistats de models de MiniMax i la gestió de la finestra de context per oferir una configuració més fiable.",
-			"geminiPro": "Suport per Gemini 3.1 Pro: S'ha afegit el suport per al model Gemini 3.1 Pro i s'ha establert com a model Gemini per defecte per a un millor rendiment.",
-			"cliNdjson": "Protocol NDJSON del CLI: Nou protocol NDJSON via stdin, subcomandes de llistat i comanda d'execució modularitzada per a fluxos de treball CLI més flexibles.",
-			"cliRelease": "CLI v0.1.0: El CLI de Roo Code arriba a la seva primera versió oficial amb una interfície de comandes estable."
+			"gpt55": "GPT-5.5 via OpenAI Codex: S'ha afegit suport per a GPT-5.5 al proveïdor OpenAI Codex perquè puguis utilitzar el model més recent directament des de Roo Code.",
+			"claudeOpus47": "Claude Opus 4.7 a Vertex AI: S'ha afegit Claude Opus 4.7 al proveïdor Vertex AI, el nou model de raonament emblemàtic d'Anthropic.",
+			"checkpointNav": "Navegació per Checkpoints Anteriors: S'han afegit controls al xat per tornar enrere pels checkpoints previs, amb suport complet d'i18n."
 		},
 		"cloudAgents": {
 			"heading": "Novetats al núvol:",
@@ -434,11 +423,6 @@
 	"versionIndicator": {
 		"ariaLabel": "Versió {{version}} - Feu clic per veure les notes de llançament"
 	},
-	"rooCloudCTA": {
-		"title": "Roo Code Cloud està evolucionant!",
-		"description": "Executa agents remots al núvol, accedeix a les teves tasques des de qualsevol lloc, col·labora amb altres i molt més.",
-		"joinWaitlist": "Registra't per rebre les últimes actualitzacions."
-	},
 	"editMessage": {
 		"placeholder": "Edita el teu missatge..."
 	},
@@ -500,7 +484,8 @@
 	},
 	"retiredProvider": {
 		"title": "Proveïdor ja no compatible",
-		"message": "Ho sentim, aquest proveïdor ja no és compatible. Hem vist molt pocs usuaris de Roo que realment l'utilitzaven i necessitem reduir l'abast del nostre codi per poder seguir avançant ràpidament i servir bé la nostra comunitat en aquest espai. Va ser una decisió molt difícil, però ens permet centrar-nos en el que més t'importa. Ho sabem, és una llàstima.",
-		"openSettings": "Obrir configuració"
+		"message": "This provider is no longer supported. Please select a different provider in your API profile settings.",
+		"openSettings": "Obrir configuració",
+		"rooMessage": "As part of our decision to sunset the Roo Code extension, we also ended the Roo Code Router, which only existed to support the extension. Sorry about the hassle."
 	}
 }
